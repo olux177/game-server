@@ -1,0 +1,4 @@
+type Query {
+  allPlayers : [Player],
+  getPlayer(id:ID): Player,
+}

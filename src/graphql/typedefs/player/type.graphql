@@ -1,0 +1,24 @@
+type PlayerObj {
+  id:ID!,
+  label:String,
+  key:String,
+  value:String
+}
+
+type Player {
+  id:ID!,
+  profile:[PlayerProfiles],
+  contacts:[PlayerObj],
+}
+
+type PlayerProfiles {
+  id:ID!,
+  titles:[PlayerObj],
+  names:[PlayerObj],
+  images:[PlayerObj],
+  attributes:[PlayerObj]
+}
+
+type PlayerMutationResult {
+  msg:String
+}

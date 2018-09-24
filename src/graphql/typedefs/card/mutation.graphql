@@ -1,0 +1,45 @@
+input attributes {
+  label:String,
+  value:String
+}
+input tagInput {
+  name:String
+}
+type Mutation {
+  createCard(
+    name:String,
+    image:String,
+    tags:[tagInput],
+    attributes:[attributes]
+  ):CardMutationResult,
+
+  updateCard(
+    id:ID!,
+    image:String,
+    name:String
+  ):CardMutationResult,
+
+  deleteCard(
+    id:ID!
+  ):CardMutationResult,
+
+  updateCardTag(
+    id:ID!,  
+    label:String,
+    value:String,
+  ):CardMutationResult,
+
+  deleteCardTag(
+    id:ID!
+  ):CardMutationResult,
+
+  updateCardAttribute(
+    id:ID!,
+    label:String,
+    value:String,
+  ):CardMutationResult,
+
+  deleteCardAttribute(
+    id:ID!
+  ):CardMutationResult,
+}

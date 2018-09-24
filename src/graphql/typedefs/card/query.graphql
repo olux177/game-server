@@ -1,0 +1,7 @@
+type Query {
+  allCards:[Card],
+  getCard (id:ID!):Card,
+  getCardByName (name:String!):Card,
+  allCardTypes: [CardTag],
+  getCardType (id:ID!):CardTag
+}

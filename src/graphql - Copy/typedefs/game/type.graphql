@@ -1,0 +1,41 @@
+type Game {
+  id:ID!,
+  name:String,
+  status:String,
+  winner:String
+}
+
+type Deck {
+  id:ID!,
+  name:String,
+  label:String,
+  desc:String,
+  card:[Card],
+}
+
+type GamePlay {
+  id:ID!,
+  game:Game!,
+  player:Player!,
+  attack:String,
+  defence:String,
+  health:String,
+}
+
+type Slot {
+  id:ID!,
+  name:String,
+  label:String
+}
+
+type PlaceCard {
+  id:ID!,
+  game:Game!,
+  player:Player!,
+  slot:Slot!,
+  card:Card!
+}
+
+type GameMutationResult {
+  msg:String
+}

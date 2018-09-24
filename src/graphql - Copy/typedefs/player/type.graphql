@@ -1,0 +1,40 @@
+type Player {
+  id:ID!,
+  profile:[PlayerProfile],
+  contacts:[PlayerContact],
+}
+type PlayerProfile {
+  id:ID!,
+  titles:[PlayerTitle],
+  names:[PlayerName],
+  images:[PlayerImage],
+  attributes:[PlayerPhysicalAttribute]
+}
+type PlayerTitle {
+  id:ID!,
+  label:String,
+  value:String
+}
+type PlayerPhysicalAttribute {
+  id:ID!,
+  label:String,
+  value:String
+}
+type PlayerName {
+  id:ID!,
+  label:String,
+  value:String
+}
+type PlayerImage {
+  id:ID!,
+  label:String,
+  value:String
+}
+type PlayerContact {
+  id:ID!,
+  label:String,
+  value:String
+}
+type PlayerMutationResult {
+  msg:String
+}

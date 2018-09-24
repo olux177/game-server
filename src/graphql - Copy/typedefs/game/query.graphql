@@ -1,0 +1,6 @@
+type Query {
+  allGames : [Game],
+  getGame(
+    id:ID!
+  ):Game
+}

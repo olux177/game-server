@@ -1,0 +1,14 @@
+input PlayerProfile {
+    key:String,
+    value:String,  
+    label:String,  
+}
+
+type Mutation {  
+  createProfile(
+    name:String,
+    names:[PlayerProfile],
+    titles:[PlayerProfile],
+    images:[PlayerProfile]
+  ):PlayerMutationResult,
+}

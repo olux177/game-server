@@ -1,0 +1,10 @@
+type Mutation {
+  createGame (
+    name:String
+  ):GameMutationResult,
+
+  joinGame (
+    game:ID
+    player:ID
+  ):GameMutationResult,
+}

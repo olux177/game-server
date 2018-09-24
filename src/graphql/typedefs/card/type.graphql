@@ -1,0 +1,37 @@
+type Card {
+  id:ID!,
+  name:String!,
+  image:String,
+  attributes:[CardAttribute],
+  stats:CardStats,
+  tags:[CardTag]
+}
+
+type CardType {
+  id:ID!,
+  name:String
+}
+
+type CardStats {
+  id:ID!,
+  card:Card,
+  label:String,
+  value:Int
+}
+
+type CardAttribute {
+  id:ID!,
+  label:String,
+  value:String
+}
+
+type CardTag {
+  id:ID!,
+  name:String,
+  cards:[Card],
+  description:String
+}
+
+type CardMutationResult {
+  msg:String
+}

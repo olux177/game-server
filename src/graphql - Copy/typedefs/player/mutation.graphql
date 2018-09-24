@@ -1,0 +1,78 @@
+input PlayerProfile {
+    key:String,
+    value:String,  
+}
+
+type Mutation {  
+  createProfile(
+    names:[PlayerProfile],
+    titles:[PlayerProfile],
+    images:[PlayerProfile]
+  ):PlayerMutationResult,
+
+  deletePlayerProfile(
+    id:ID!,
+    table:String,
+  ):PlayerMutationResult,
+
+
+  
+
+  updatePlayerName(
+    id:ID!,
+    key:String,
+    value:String,
+  ):PlayerMutationResult,
+
+  deletePlayerName(
+    id:ID!,
+  ):PlayerMutationResult,
+
+  
+
+  updatePlayerTitle(
+    id:ID!,
+    key:String,
+    value:String,
+  ):PlayerMutationResult,
+
+  deletePlayerTitle(
+    id:ID!,
+  ):PlayerMutationResult,
+
+
+
+  updatePlayerImage(
+    id:ID!,
+    key:String,
+    value:String,
+  ):PlayerMutationResult,
+
+  deletePlayerImage(
+    id:ID!,
+  ):PlayerMutationResult,
+
+
+
+  updatePlayerContact(
+    id:ID!,
+    key:String,
+    value:String,
+  ):PlayerMutationResult,
+
+  deletePlayerContact(
+    id:ID!,
+  ):PlayerMutationResult,
+
+
+
+  updatePlayerAttribute(
+    id:ID!,
+    key:String,
+    value:String,
+  ):PlayerMutationResult,
+
+  deletePlayerAttribute(
+    id:ID!,
+  ):PlayerMutationResult,
+}

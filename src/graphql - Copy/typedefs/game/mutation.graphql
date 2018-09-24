@@ -1,0 +1,60 @@
+type Mutation {
+  createGame (
+    name:String
+  ):GameMutationResult,
+
+  updateGame(
+    id:ID!,
+    status:String,
+    winner:String
+  ):GameMutationResult
+
+  deleteGame (id:ID!):GameMutationResult,
+
+
+
+
+  gamePlay(
+    gameID:ID!,
+    playerID:ID!
+  ):GameMutationResult,
+
+  updateGamePlay(
+    id:ID!,
+    attack:Int,
+    defence:Int,
+    health:Int,
+  ):GameMutationResult,
+
+
+
+
+  addGameSlot(
+    name:String!,
+    label:String
+  ):GameMutationResult,
+
+  updateGameSlot(
+    id:ID!,
+    name:String!,
+    label:String
+  ):GameMutationResult,
+
+  deleteGameSlot(
+    id:ID!
+  ):GameMutationResult,
+
+
+
+
+  placeCardOnSlot(
+    playerID:ID!,
+    gameID:ID!,
+    cardID:ID!,
+    slotID:ID!
+  ):GameMutationResult
+
+  removeCardFromSlot(
+    id:ID!,
+  ):GameMutationResult
+}
